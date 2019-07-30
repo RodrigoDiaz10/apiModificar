@@ -38,5 +38,25 @@
   "book": {
     "dataSource": "db",
     "public": true
+  },
+  "student": {
+    "dataSource": "db",
+    "public": true
+  },
+  "qualifications": {
+    "dataSource": "db",
+    "public": true
+  },
+  "teacher": {
+    "dataSource": "db",
+    "public": true
+  },
+  "proyect": {
+    "dataSource": "db",
+    "public": true
+  },
+  "form": {
+    "dataSource": "db",
+    "public": true
   }
 }

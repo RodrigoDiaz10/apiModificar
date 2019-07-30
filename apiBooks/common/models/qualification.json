@@ -1,0 +1,55 @@
+{
+  "name": "qualification",
+  "plural": "qualifications",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "note1": {
+      "type": "number"
+    },
+    "note2": {
+      "type": "number"
+    },
+    "note3": {
+      "type": "number"
+    },
+    "finalNote": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "state": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  
+  ],
+  "methods": {}
+}

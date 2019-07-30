@@ -1,0 +1,73 @@
+{
+  "name": "form",
+  "plural": "forms",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "members": {
+      "type": "string"
+    },
+    "idStudent": {
+      "type": "number",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "tools": {
+      "type": "string"
+    },
+    "objetive": {
+      "type": "string"
+    },
+    "level": {
+      "type": "string"
+    },
+    "area": {
+      "type": "string"
+    },
+    "state": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  
+  ],
+  "methods": {}
+}
